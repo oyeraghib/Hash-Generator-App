@@ -7,7 +7,7 @@
 
   <fragment
       android:id="@+id/homeFragment"
-      android:name="com.example.hashgeneratorapp.HomeFragment"
+      android:name="com.example.hashgeneratorapp.ui.fragments.HomeFragment"
       android:label="Home"
       tools:layout="@layout/fragment_home" >
     <action
@@ -20,11 +20,15 @@
   </fragment>
   <fragment
       android:id="@+id/successFragment"
-      android:name="com.example.hashgeneratorapp.SuccessFragment"
+      android:name="com.example.hashgeneratorapp.ui.fragments.SuccessFragment"
       android:label="Success"
       tools:layout="@layout/fragment_success" >
     <action
         android:id="@+id/actionSuccessToHome"
         app:destination="@id/homeFragment" />
+    <argument
+        android:name="hash"
+        app:argType="string"
+        android:defaultValue="Empty"/>
   </fragment>
 </navigation>
