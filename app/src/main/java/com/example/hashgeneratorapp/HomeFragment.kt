@@ -45,6 +45,8 @@ class HomeFragment : Fragment() {
     }
 
     private suspend fun updateAnimations() {
+        binding.btnGenerate.isClickable = false
+
         binding.tvTitle.animate().alpha(0f).setDuration(400L)
         binding.btnGenerate.animate().alpha(0f).setDuration(400L)
 
@@ -56,10 +58,11 @@ class HomeFragment : Fragment() {
             .translationXBy(-1200f)
             .setDuration(400L)
 
-        delay(400L)
+        delay(600L)
 
         binding.successFragmentBackground.animate()
-            .alpha(1f).duration = 600L
+            .alpha(1f).setDuration(600L)
+
         binding.successFragmentBackground.animate()
             .rotationBy(720f)
             .setDuration(600L)
@@ -70,7 +73,7 @@ class HomeFragment : Fragment() {
         binding.successFragmentBackground.animate()
             .scaleYBy(900f).setDuration(800L)
 
-        binding.ivCheck.animate().alpha(1f).setDuration(600L)
+        binding.ivCheck.animate().alpha(1f).setDuration(1000L)
         delay(1500L)
 
     }
