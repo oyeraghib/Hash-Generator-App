@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,4 +9,50 @@
     >
 
 
-</FrameLayout>
+  <TextView
+      android:text="TextView"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:id="@+id/tvHash"
+      android:textColor="@color/teal_200"
+      android:textAlignment="center"
+      android:textSize="26sp"
+      android:textStyle="bold"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      android:layout_marginStart="32dp"
+      android:layout_marginEnd="32dp"
+      app:layout_constraintHorizontal_bias="0.539"
+      app:layout_constraintBottom_toTopOf="@+id/btnCopy"
+      app:layout_constraintTop_toBottomOf="@+id/include"
+      android:layout_marginTop="32dp"
+      android:layout_marginBottom="32dp"
+      />
+  <Button
+      android:text="Copy"
+      android:layout_width="0dp"
+      android:layout_height="70dp"
+      android:id="@+id/btnCopy"
+      android:textStyle="bold"
+      android:textSize="16sp"
+      android:backgroundTint="@color/blue"
+      android:layout_marginLeft="16dp"
+      android:layout_marginRight="16dp"
+      app:icon="@drawable/ic_copy"
+      android:paddingStart="140dp"
+      android:paddingEnd="150dp"
+      android:layout_marginBottom="24dp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintBottom_toBottomOf="parent"
+      />
+  <include
+      android:layout_width="wrap_content"
+      android:layout_height="32dp"
+      layout="@layout/copied_message"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      android:id="@+id/include"
+      />
+</androidx.constraintlayout.widget.ConstraintLayout>
