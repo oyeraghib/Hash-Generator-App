@@ -11,6 +11,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.navArgs
+import com.example.hashgeneratorapp.R
 import com.example.hashgeneratorapp.databinding.FragmentSuccessBinding
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -42,13 +43,14 @@ class SuccessFragment : Fragment() {
     }
 
     private suspend fun messageCopied() {
+
         _binding?.include?.tvMessage?.animate()?.translationY(80f)
             ?.setDuration(200L)
 
         _binding?.include?.viewMessage?.animate()?.translationY(80f)
             ?.setDuration(200L)
 
-        delay(5000L)
+        delay(2000L)
 
         _binding?.include?.tvMessage?.animate()?.translationY(-80f)
             ?.setDuration(500L)
